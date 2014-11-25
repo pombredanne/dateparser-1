@@ -103,6 +103,17 @@ class TestDateParser(BaseTestCase):
         self.assertEqual(date.month, 5)
         self.assertEqual(date.day, 11)
 
+    def test_fr_dates_does_not_break_if_given_weekday_too(self):
+        date = DateParser().parse('Dim 24 F\xe9v 2013 11:02')
+        self.assertEqual(date.year, 2013)
+        self.assertEqual(date.month, 2)
+        self.assertEqual(date.day, 24)
+
+        date = DateParser().parse('Mar 25 Nov 2014 11:02')
+        self.assertEqual(date.year, 2014)
+        self.assertEqual(date.month, 11)
+        self.assertEqual(date.day, 25)
+
     def test_es_dates(self):
         date = DateParser().parse(u'Martes 21 de Octubre de 2014')
         self.assertEqual(date.year, 2014)

@@ -79,13 +79,13 @@ class fr_parserinfo(BaseParserInfo):
     JUMP = BaseParserInfo.JUMP + ["le"]
 
     WEEKDAYS = [
-        ("Lundi",),
-        ("Mardi",),
-        ("Mercredi",),
-        ("Jeudi",),
-        ("Vendredi",),
-        ("Samedi",),
-        ("Dimanche",),
+        ("Lundi", 'Lun'),
+        ("Mardi", 'Mar'),
+        ("Mercredi", 'Mer',),
+        ("Jeudi", 'Jeu'),
+        ("Vendredi", 'Ven'),
+        ("Samedi", 'Sam'),
+        ("Dimanche", 'Dim', ),
     ]
 
     MONTHS = [
