@@ -278,6 +278,33 @@ class nl_parserinfo(BaseParserInfo):
     ]
 
 
+class ar_parserinfo(BaseParserInfo):
+    WEEKDAYS = [
+        ('ﺍﻺﺜﻨﻴﻧ',),
+        ('ﺎﻠﺛﻼﺛﺍﺀ',),
+        ('ﺍﻷﺮﺒﻋﺍﺀ',),
+        ('ﺎﻠﺨﻤﻴﺳ',),
+        ('ﺎﻠﺠﻤﻋﺓ',),
+        ('ﺎﻠﺴﺒﺗ',),
+        ('ﺍﻸﺣﺩ',),
+    ]
+
+    MONTHS = [
+        ('ﻲﻧﺎﻳﺭ',),
+        ('ﻒﺑﺭﺎﻳﺭ',),
+        ('ﻡﺍﺮﺳ',),
+        ('ﺄﺑﺮﻴﻟ',),
+        ('ﻡﺎﻳﻭ',),
+        ('ﻱﻮﻨﻳﻭ',),
+        ('ﻱﻮﻠﻳﻭ',),
+        ('ﺄﻐﺴﻄﺳ',),
+        ('ﺲﺒﺘﻤﺑﺭ',),
+        ('ﺄﻜﺗﻮﺑﺭ',),
+        ('ﻥﻮﻔﻤﺑﺭ',),
+        ('ﺪﻴﺴﻤﺑﺭ',),
+    ]
+
+
 class en_parserinfo(BaseParserInfo):
     JUMP = list(set(BaseParserInfo.JUMP) | set(parser.parserinfo.JUMP))
 
@@ -294,6 +321,7 @@ INFOS = OrderedDict([
     ('ro', ro_parserinfo()),
     ('nl', nl_parserinfo()),
     ('en', en_parserinfo()),
+    ('ar', ar_parserinfo()),
 ])
 
 
